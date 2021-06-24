@@ -13,13 +13,11 @@ pipeline {
         stage('Build oc2-sedna') {
           steps {
             dir(path: 'oc2-sedna') {
-              withGradle() {
-                build './gradlew build'
-                build './gradlew reobfJar'
-              }
-
+              sh './gradlew build'
+              sh './gradlew reobfJar'
             }
 
+            withGradle()
           }
         }
 
