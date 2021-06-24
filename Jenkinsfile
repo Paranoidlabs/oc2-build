@@ -1,6 +1,13 @@
 pipeline {
   agent any
   stages {
+    stage('pull gits I guess') {
+      steps {
+        git(url: 'https://github.com/Paranoidlabs/oc2.git', branch: '1.16.5')
+        git(url: 'https://github.com/Paranoidlabs/oc2-sedna.git', branch: '1.16.4')
+      }
+    }
+
     stage('Build oc2-sedna') {
       parallel {
         stage('Build oc2-sedna') {
@@ -15,14 +22,6 @@ pipeline {
 
           }
         }
-
-        stage('pull gits I guess') {
-          steps {
-            git(url: 'https://github.com/Paranoidlabs/oc2.git', branch: '1.16.5')
-            git(url: 'https://github.com/Paranoidlabs/oc2-sedna.git', branch: '1.16.4')
-          }
-        }
-
       }
     }
 
