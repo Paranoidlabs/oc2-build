@@ -4,3 +4,6 @@
 [submodule "oc2-sedna"]
 	path = oc2-sedna
 	url = https://github.com/Paranoidlabs/oc2-sedna.git
+[submodule "buildroot"]
+	path = buildroot
+	url = https://github.com/Paranoidlabs/buildroot.git
