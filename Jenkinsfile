@@ -14,14 +14,15 @@ pipeline {
           steps {
             dir(path: 'oc2-sedna') {
               withGradle() {
-                build 'build'
-                build 'reobfJar'
+                build './gradlew build'
+                build './gradlew reobfJar'
               }
 
             }
 
           }
         }
+
       }
     }
 
