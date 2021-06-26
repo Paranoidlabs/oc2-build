@@ -1,6 +1,7 @@
 [submodule "oc2"]
 	path = oc2
 	url = https://github.com/Paranoidlabs/oc2.git
+	branch = develop
 [submodule "oc2-sedna"]
 	path = oc2-sedna
 	url = https://github.com/Paranoidlabs/oc2-sedna.git
